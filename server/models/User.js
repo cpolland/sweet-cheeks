@@ -50,7 +50,7 @@ const userSchema = new Schema({
   masks: {
     type: String,
   },
-  post: [
+  posts: [
     {
       type: Schema.Types.ObjectId,
       ref: "Community",
