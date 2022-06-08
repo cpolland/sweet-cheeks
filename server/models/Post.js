@@ -1,6 +1,6 @@
 const { Schema, model } = require("mongoose");
 
-const communitySchema = new Schema({
+const postSchema = new Schema({
   author: {
     type: String,
     required: true,
@@ -26,6 +26,6 @@ const communitySchema = new Schema({
   ],
 });
 
-const Community = model("Community", communitySchema);
+const Post = model("Post", postSchema);
 
-module.exports = Community;
+module.exports = Post;

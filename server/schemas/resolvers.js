@@ -47,6 +47,76 @@ const resolvers = {
       await user.save();
       return { token, user };
     },
+    addPost: async (parent, { postText }, context) => {
+      if (context.user) {
+        const post = await Thought.create({
+          postText,
+          author: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { thoughts: thought._id } }
+        );
+
+        return thought;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    addComment: async (
+      parent,
+      { commentId, commentText, username },
+      context
+    ) => {
+      if (context.user) {
+        return Comment.findOneAndUpdate(
+          { _id: commentId, username },
+          {
+            $addToSet: {
+              comments: { commentText, username: context.user.username },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removePost: async (parent, { postId }, context) => {
+      if (context.user) {
+        const post = await Post.findOneAndDelete({
+          _id: postId,
+          author: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $pull: { posts: community._id } }
+        );
+
+        return thought;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removeComment: async (parent, { postId, commentId }, context) => {
+      if (context.user) {
+        return Post.findOneAndUpdate(
+          { _id: postId },
+          {
+            $pull: {
+              comments: {
+                _id: commentId,
+                username: context.user.username,
+              },
+            },
+          },
+          { new: true }
+        );
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
   },
 };
 
