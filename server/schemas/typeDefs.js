@@ -25,6 +25,19 @@ const typeDefs = gql`
     email: String!
     lastLogin: Date!
   }
+
+  type Community {
+    _id: ID!
+    author: String
+    createdAt: String
+    body: String
+    comments: [Comment]!
+  }
+
+  type Comment {
+    _id: ID!
+    username: String!
+  }
 `;
 
 module.exports = typeDefs;
