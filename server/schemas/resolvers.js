@@ -17,6 +17,12 @@ const resolvers = {
       }
       return User.findOne({ email: ctx.user.email });
     },
+    findUser: async (parent, { username }) => {
+      return User.findOne({ username }).populate("User");
+    },
+    users: async () => {
+      return User.find().populate("User");
+    },
   },
   Mutation: {
     createUser: async (parent, args) => {
