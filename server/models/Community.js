@@ -10,7 +10,7 @@ const communitySchema = new Schema({
     type: Date,
     default: Date.now,
   },
-  body: {
+  postText: {
     type: String,
     required: "You need to leave a post!",
     minlength: 1,
