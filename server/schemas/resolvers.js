@@ -49,14 +49,14 @@ const resolvers = {
     },
     addPost: async (parent, { postText }, context) => {
       if (context.user) {
-        const post = await Thought.create({
+        const post = await Post.create({
           postText,
           author: context.user.username,
         });
 
         await User.findOneAndUpdate(
           { _id: context.user._id },
-          { $addToSet: { thoughts: thought._id } }
+          { $addToSet: { posts: post._id } }
         );
 
         return thought;
