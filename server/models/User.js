@@ -23,6 +23,39 @@ const userSchema = new Schema({
     type: Date,
     default: Date.now,
   },
+  age: {
+    type: Number,
+    require: true,
+  },
+  city: {
+    type: String,
+    required: true,
+  },
+  skinType: {
+    type: String,
+    required: true,
+  },
+  cleanser: {
+    type: String,
+  },
+  toner: {
+    type: String,
+  },
+  moisturizer: {
+    type: String,
+  },
+  serums: {
+    type: String,
+  },
+  masks: {
+    type: String,
+  },
+  post: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Community",
+    },
+  ],
 });
 
 userSchema.pre("save", async function (next) {
