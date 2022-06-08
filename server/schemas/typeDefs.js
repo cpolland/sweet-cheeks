@@ -8,7 +8,7 @@ const typeDefs = gql`
     "Find the logged in user."
     findUser(userId: ID!): User
     users: [User]
-    post: [Community]
+    post: [Post]
     user(username: String!): User
     me: User
   }
@@ -16,10 +16,10 @@ const typeDefs = gql`
   type Mutation {
     createUser(email: String!, password: String!, username: String!): Auth
     login(email: String!, password: String!): Auth
-    addPost(postText: String!): Community
+    addPost(postText: String!): Post
     addComment(commentId: ID!, commentText: String!, username: String!): Comment
-    removePost(communityId: ID!): Boolean
-    removeComment(commentId: ID!): Boolean
+    removePost(postId: ID!): Boolean
+    removeComment(postId: ID!, commentId: ID!): Boolean
   }
 
   type Auth {
@@ -32,7 +32,7 @@ const typeDefs = gql`
     username: String!
     email: String!
     lastLogin: Date!
-    age: Number
+    age: Int
     city: String
     skinType: String!
     cleanser: String
@@ -40,10 +40,10 @@ const typeDefs = gql`
     moisturizer: String
     serums: String
     masks: String
-    post: [Community]!
+    post: [Post]!
   }
 
-  type Community {
+  type Post {
     _id: ID!
     author: String
     createdAt: String

@@ -25,15 +25,12 @@ const userSchema = new Schema({
   },
   age: {
     type: Number,
-    require: true,
   },
   city: {
     type: String,
-    required: true,
   },
   skinType: {
     type: String,
-    required: true,
   },
   cleanser: {
     type: String,
@@ -53,7 +50,7 @@ const userSchema = new Schema({
   posts: [
     {
       type: Schema.Types.ObjectId,
-      ref: "Community",
+      ref: "Post",
     },
   ],
 });
