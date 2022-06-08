@@ -3,6 +3,7 @@ const {
   UserInputError,
 } = require("apollo-server-express");
 const { User } = require("../models");
+const Community = require("../models/Community");
 const { signToken } = require("../util/auth");
 const { dateScalar } = require("./customScalars");
 
@@ -17,11 +18,14 @@ const resolvers = {
       }
       return User.findOne({ email: ctx.user.email });
     },
-    findUser: async (parent, { username }) => {
-      return User.findOne({ username }).populate("User");
+    findUser: async (parent, { userId }) => {
+      return User.findOne({ userId });
     },
     users: async () => {
-      return User.find().populate("User");
+      return User.find().populate("posts");
+    },
+    posts: async () => {
+      return Community.find().populate("comments");
     },
   },
   Mutation: {

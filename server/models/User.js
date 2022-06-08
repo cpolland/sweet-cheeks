@@ -25,15 +25,12 @@ const userSchema = new Schema({
   },
   age: {
     type: Number,
-    require: true,
   },
   city: {
     type: String,
-    required: true,
   },
   skinType: {
     type: String,
-    required: true,
   },
   cleanser: {
     type: String,
