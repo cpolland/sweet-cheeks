@@ -17,9 +17,9 @@ const typeDefs = gql`
     createUser(email: String!, password: String!, username: String!): Auth
     login(email: String!, password: String!): Auth
     addPost(postText: String!): Post
-    addComment(commentId: ID!, commentText: String!, username: String!): Comment
+    addComment(postId: ID!, commentText: String!, username: String!): Comment
     removePost(postId: ID!): Boolean
-    removeComment(postId: ID!, commentId: ID!): Boolean
+    removeComment(commentId: ID!): Boolean
   }
 
   type Auth {
@@ -47,7 +47,7 @@ const typeDefs = gql`
     _id: ID!
     author: String
     createdAt: String
-    body: String
+    postText: String
     comments: [Comment]!
   }
 
