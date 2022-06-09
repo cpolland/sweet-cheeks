@@ -1,0 +1,28 @@
+[
+    {
+      "username": "codyskincare",
+      "email": "cody2@email.com",
+      "password": "password1",
+      "age": "28",
+      "city": "Denver",
+      "skinType": "oily-dry",
+      "clenser": "glossier milk clenser",
+      "toner": "the ordinary rose toner",
+      "moisturizer": "burt bees",
+      "serums": "biore overnight repair"
+      
+    },
+    {
+        "username": "Fionaiscool",
+        "email": "fiona1@email.com",
+        "password": "password2",
+        "age": "25",
+        "city": "San Diego",
+        "skinType": "oily-dry",
+        "clenser": "avuve clenser",
+        "toner": "the ordinary rose toner",
+        "moisturizer": "cliniqe",
+        "serums": "vitmin c serum"
+        
+      }
+  ]
