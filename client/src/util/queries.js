@@ -10,3 +10,26 @@ export const ME = gql`
     }
   }
 `;
+
+
+// export const QUERY_POSTS = gql`
+//   query getPosts {
+//     posts {
+//       _id
+//       lastLogin
+//       username
+//       email
+//     }
+//   }
+// `;
+
+// export const QUERY_USERS = gql`
+//   query getUsers {
+//     posts {
+//       _id
+//       lastLogin
+//       username
+//       email
+//     }
+//   }
+// `;
