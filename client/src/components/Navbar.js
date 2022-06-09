@@ -11,9 +11,13 @@ export default function Navbar() {
       </NavLink>
       {isLoggedIn ? (
         <>
-          <NavLink to="/protected" className="navbar-link">
-            User
+          <NavLink to="/community" className="navbar-link">
+            Community
           </NavLink>
+          <NavLink to="/browse" className="navbar-link">
+            Browse 
+          </NavLink>
+          
           <button className="navbar-link" onClick={logout}>
             Logout
           </button>

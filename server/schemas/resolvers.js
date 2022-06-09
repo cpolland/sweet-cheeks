@@ -2,8 +2,7 @@ const {
   AuthenticationError,
   UserInputError,
 } = require("apollo-server-express");
-const { User } = require("../models");
-const Community = require("../models/Community");
+const { User, Post, Comment } = require("../models");
 const { signToken } = require("../util/auth");
 const { dateScalar } = require("./customScalars");
 
@@ -25,7 +24,7 @@ const resolvers = {
       return User.find().populate("posts");
     },
     posts: async () => {
-      return Community.find().populate("comments");
+      return Post.find().populate("comments");
     },
   },
   Mutation: {
@@ -56,6 +55,50 @@ const resolvers = {
       user.lastLogin = Date.now();
       await user.save();
       return { token, user };
+    },
+    addPost: async (parent, { postText }, context) => {
+      if (context.user) {
+        const post = await Post.create({
+          postText,
+          author: context.user.username,
+        });
+
+        await User.findOneAndUpdate(
+          { _id: context.user._id },
+          { $addToSet: { posts: post._id } }
+        );
+
+        return post;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    addComment: async (parent, { postId, commentText, username }, context) => {
+      if (context.user) {
+        const comment = await Comment.create({
+          commentText,
+          username: context.user.username,
+        });
+        return comment;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removePost: async (parent, { postId }, context) => {
+      if (context.user) {
+        const post = await Post.findOneAndDelete({
+          _id: postId,
+        });
+        return post;
+      }
+      throw new AuthenticationError("You need to be logged in!");
+    },
+    removeComment: async (parent, { commentId }, context) => {
+      if (context.user) {
+        const comment = await Comment.findOneAndDelete({
+          _id: commentId,
+        });
+        return comment;
+      }
+      throw new AuthenticationError("You need to be logged in!");
     },
   },
 };
