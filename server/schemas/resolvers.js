@@ -17,6 +17,15 @@ const resolvers = {
       }
       return User.findOne({ email: ctx.user.email });
     },
+    findUser: async (parent, { userId }) => {
+      return User.findOne({ userId });
+    },
+    users: async () => {
+      return User.find().populate("posts");
+    },
+    posts: async () => {
+      return Post.find().populate("comments");
+    },
   },
   Mutation: {
     createUser: async (parent, args) => {
@@ -69,12 +78,6 @@ const resolvers = {
           commentText,
           username: context.user.username,
         });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $addToSet: { comments: comment._id } }
-        );
-
         return comment;
       }
       throw new AuthenticationError("You need to be logged in!");
@@ -84,12 +87,6 @@ const resolvers = {
         const post = await Post.findOneAndDelete({
           _id: postId,
         });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { posts: post._id } }
-        );
-
         return post;
       }
       throw new AuthenticationError("You need to be logged in!");
@@ -99,12 +96,6 @@ const resolvers = {
         const comment = await Comment.findOneAndDelete({
           _id: commentId,
         });
-
-        await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { comments: comment._id } }
-        );
-
         return comment;
       }
       throw new AuthenticationError("You need to be logged in!");

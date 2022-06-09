@@ -8,7 +8,7 @@ const typeDefs = gql`
     "Find the logged in user."
     findUser(userId: ID!): User
     users: [User]
-    post: [Post]
+    posts: [Post]
     user(username: String!): User
     me: User
   }
