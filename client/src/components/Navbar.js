@@ -1,5 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../util/auth";
+import React from "react";
+
 import "./Navbar.css";
 
 export default function Navbar() {
@@ -15,9 +17,9 @@ export default function Navbar() {
             Community
           </NavLink>
           <NavLink to="/browse" className="navbar-link">
-            Browse 
+            Browse
           </NavLink>
-          
+
           <button className="navbar-link" onClick={logout}>
             Logout
           </button>
