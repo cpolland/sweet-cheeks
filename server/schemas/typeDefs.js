@@ -34,14 +34,13 @@ const typeDefs = gql`
     lastLogin: Date!
     age: Int
     city: String
-    skinType: String!
+    skinType: String
     cleanser: String
     toner: String
     moisturizer: String
     serums: String
     masks: String
-    bio: String
-    post: [Post]!
+    post: [Post]
   }
 
   type Post {
