@@ -1,4 +1,5 @@
 import { useAuth } from "../util/auth";
+import { Button } from "react-bootstrap";
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();

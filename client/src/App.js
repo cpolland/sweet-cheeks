@@ -15,7 +15,6 @@ import SignUp from "./pages/SignUp";
 import { client } from "./util/apolloClient";
 import { AuthProvider } from "./util/auth";
 
-
 function App() {
   return (
     <ApolloProvider client={client}>
