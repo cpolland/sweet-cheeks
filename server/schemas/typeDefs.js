@@ -39,7 +39,7 @@ const typeDefs = gql`
     toner: String
     moisturizer: String
     serums: String
-    masks: String
+    bio: String
     post: [Post]
   }
 
