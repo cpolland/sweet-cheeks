@@ -116,10 +116,11 @@ export const AuthProvider = ({ children }) => {
         // TODO: implement improved error message
         throw new Error("Auth error. Invalid parameter received.");
       }
-
+      console.log(email, password, username);
       const { data } = await createUser({
         variables: { email, password, username },
       });
+      console.log(data);
       dispatch({ type: LOGIN_SUCCESS, payload: data.createUser.token });
     } catch (error) {
       console.log(error);

@@ -9,8 +9,8 @@ export default function Home() {
       <h1>Welcome {isLoggedIn ? user.username : "Guest"}!</h1>
       <hr />
       <p>
-        Here at Sweet-Cheeks we promote sisterhood and body positivity! It seems
-        these days skincare has dominated the internet. Our goal is to create a
+        Here at Sweet-Cheeks we promote sisterhood and body positivity! These
+        days, skincare has dominated the internet. Our goal is to create a
         community where everyone can share their skincare regimen and list
         products a user suggests for their corresponding skin type. Sign up
         today and see what other skincare regimens our community is using!

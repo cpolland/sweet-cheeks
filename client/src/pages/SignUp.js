@@ -27,7 +27,7 @@ const initialFormState = {
   skinType: "",
   cleanser: "",
   toner: "",
-  mosturizer: "",
+  moisturizer: "",
   serums: "",
   bio: "",
 };
@@ -50,6 +50,7 @@ export default function SignUp() {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
+    console.log(formState);
     signup(formState);
   };
 
@@ -141,9 +142,9 @@ export default function SignUp() {
           </label>
           <input
             disabled={loading}
-            id="skin-type"
+            id="skinType"
             type="text"
-            name="skin-type"
+            name="skinType"
             placeholder="Enter your skin type"
             value={formState.skinType.value}
             onChange={handleInputChange}
@@ -169,11 +170,11 @@ export default function SignUp() {
           </label>
           <input
             disabled={loading}
-            id="mosturizer"
+            id="moisturizer"
             type="text"
-            name="mosturizer"
-            placeholder="Enter your mosturizer"
-            value={formState.mosturizer.value}
+            name="moisturizer"
+            placeholder="Enter your moisturizer"
+            value={formState.moisturizer.value}
             onChange={handleInputChange}
           />
         </div>

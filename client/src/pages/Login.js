@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLocation, Navigate } from "react-router-dom";
 import { useAuth } from "../util/auth";
+import { Form, Button } from "react-bootstrap";
 
 // This signup form is intentionally minimalist to reduce effort required to
 // customize it to your app's needs. See the excellent best practices guide for
@@ -53,14 +54,10 @@ export default function Login() {
 
   return (
     <div>
-      <h1>Login</h1>
-      <hr />
-      <form onSubmit={handleSubmit}>
-        <div style={styles.formControl}>
-          <label htmlFor="email" style={styles.label}>
-            Email
-          </label>
-          <input
+      <Form onSubmit={handleSubmit}>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label htmlFor="email">Email</Form.Label>
+          <Form.Control
             disabled={loading}
             id="email"
             type="email"
@@ -69,12 +66,13 @@ export default function Login() {
             value={formState.email.value}
             onChange={handleInputChange}
           />
-        </div>
-        <div style={styles.formControl}>
-          <label htmlFor="new-password" style={styles.label}>
-            Password
-          </label>
-          <input
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label htmlFor="new-password">Password</Form.Label>
+          <Form.Control
             disabled={loading}
             id="new-password"
             type="password"
@@ -83,13 +81,11 @@ export default function Login() {
             value={formState.password.value}
             onChange={handleInputChange}
           />
-        </div>
-        <div style={styles.formControl}>
-          <button disabled={loading} type="submit">
-            {loading ? "Loading..." : "Submit"}
-          </button>
-        </div>
-      </form>
+        </Form.Group>
+        <Button disabled={loading} variant="primary" type="submit">
+          {loading ? "Loading..." : "Submit"}
+        </Button>
+      </Form>
     </div>
   );
 }
