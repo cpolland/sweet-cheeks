@@ -1,35 +1,38 @@
-// import { useParams } from 'react-router-dom';
-// import { useQuery } from '@apollo/client';
-// import {  QUERY_POST, QUERY_COMMENTS } from '../util/queries';
+import { useParams } from 'react-router-dom';
+import { useQuery } from '@apollo/client';
+import {  QUERY_POST } from '../util/queries';
 
 
-// function ViewComments() {
-//   const params  = useParams();
-//   console.log(params);
+function ViewComments() {
+  const params  = useParams();
+  console.log(params);
 
-//   const { loading, error, data } = useQuery(QUERY_POST, QUERY_COMMENTS, {
-//     variables: params
-//   });
-//   console.log(loading);
-//   console.log(data);
-// if(error) {
-//   console.log(error);
-// }
+  const { loading, error, data } = useQuery(QUERY_POST,  {
+    variables: params
 
-// return (
-//   <>
-//  {
+  });
+  console.log(loading);
+  console.log(data);
+if(error) {
+  console.log(error);
+}
+
+const post = {author: "marlovessknn", createdAt: Date.now, postText: "Hello, I love skincare!", comments: [{userName:"mikelovesSPF", commentText:"Cool, so do I! ", createdAt: Date.now,  }]};
+
+return (
+  <>
+ {
  
-//  loading ? <> "loading" </>: 
-//    <div>
-//    <h1>{data}</h1>
-//    {/* <h3>{data.post.description}</h3> */}
-//    </div>
-//  }
-//  </>
-//  )
+ loading ? <> "loading" </>: 
+   <div>
+   <h1>{data.post}</h1>
+   {/* <h3>{data.post.description}</h3> */}
+   </div>
+ }
+ </>
+ )
  
-// }
+}
 
 
-// export default ViewComments;
+export default ViewComments;

@@ -9,7 +9,7 @@ const commentSchema = new Schema({
 
   commentText: {
     type: String,
-    required: "You need to leave a comment!",
+    required: true,
     minlength: 1,
     maxlength: 280,
     trim: true,
