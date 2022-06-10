@@ -150,22 +150,22 @@ export default function SignUp() {
           />
         </div>
         <div style={styles.formControl}>
-          <label htmlFor="clenser" style={styles.label}>
-            Clenser
+          <label htmlFor="cleanser" style={styles.label}>
+            Cleanser
           </label>
           <input
             disabled={loading}
-            id="clenser"
+            id="cleanser"
             type="text"
-            name="clenser"
-            placeholder="Enter your clenser"
-            value={formState.clenser.value}
+            name="cleanser"
+            placeholder="Enter your cleanser"
+            value={formState.cleanser.value}
             onChange={handleInputChange}
           />
         </div>
         <div style={styles.formControl}>
           <label htmlFor="moisturizer" style={styles.label}>
-            Mosturizer
+            Moisturizer
           </label>
           <input
             disabled={loading}
