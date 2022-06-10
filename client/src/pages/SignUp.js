@@ -22,6 +22,14 @@ const initialFormState = {
   username: "",
   email: "",
   password: "",
+  age: "",
+  city: "",
+  skinType: "",
+  clenser: "",
+  toner: "",
+  mosturizer: "",
+  serums: "",
+  bio: "",
 };
 
 export default function SignUp() {
@@ -47,7 +55,7 @@ export default function SignUp() {
 
   if (isLoggedIn) {
     // navigate to the home page
-    return <Navigate to="/" replace />
+    return <Navigate to="/" replace />;
   }
   return (
     <div>
@@ -94,6 +102,120 @@ export default function SignUp() {
             name="password"
             placeholder="Enter password"
             value={formState.password.value}
+            onChange={handleInputChange}
+          />
+        </div>
+
+        <div style={styles.formControl}>
+          <label htmlFor="age" style={styles.label}>
+            Age
+          </label>
+          <input
+            autoFocus
+            disabled={loading}
+            id="age"
+            type="text"
+            placeholder="Enter age"
+            name="age"
+            value={formState.age.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="city" style={styles.label}>
+            City
+          </label>
+          <input
+            disabled={loading}
+            id="city"
+            type="text"
+            name="city"
+            placeholder="Enter city"
+            value={formState.city.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="skin-type" style={styles.label}>
+            Skin Type
+          </label>
+          <input
+            disabled={loading}
+            id="skin-type"
+            type="text"
+            name="skin-type"
+            placeholder="Enter your skin type"
+            value={formState.skinType.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="clenser" style={styles.label}>
+            Clenser
+          </label>
+          <input
+            disabled={loading}
+            id="clenser"
+            type="text"
+            name="clenser"
+            placeholder="Enter your clenser"
+            value={formState.clenser.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="moisturizer" style={styles.label}>
+            Mosturizer
+          </label>
+          <input
+            disabled={loading}
+            id="mosturizer"
+            type="text"
+            name="mosturizer"
+            placeholder="Enter your mosturizer"
+            value={formState.mosturizer.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="toner" style={styles.label}>
+            Toner
+          </label>
+          <input
+            disabled={loading}
+            id="toner"
+            type="text"
+            name="toner"
+            placeholder="Enter your toner"
+            value={formState.toner.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="serums" style={styles.label}>
+            Serums
+          </label>
+          <input
+            disabled={loading}
+            id="serums"
+            type="text"
+            name="serums"
+            placeholder="Enter your serums"
+            value={formState.serums.value}
+            onChange={handleInputChange}
+          />
+        </div>
+        <div style={styles.formControl}>
+          <label htmlFor="bio" style={styles.label}>
+            Tell us about your skin!
+          </label>
+          <input
+            disabled={loading}
+            id="bio"
+            type="text"
+            name="bio"
+            placeholder="Enter your skin type"
+            value={formState.bio.value}
             onChange={handleInputChange}
           />
         </div>
