@@ -22,6 +22,15 @@ const initialFormState = {
   username: "",
   email: "",
   password: "",
+  age: "",
+  city: "",
+  skinType: "",
+  cleanser: "",
+  toner: "",
+  moisturizer: "",
+  serums: "",
+  masks: "",
+  bio: "",
 };
 
 export default function SignUp() {
@@ -47,7 +56,7 @@ export default function SignUp() {
 
   if (isLoggedIn) {
     // navigate to the home page
-    return <Navigate to="/" replace />
+    return <Navigate to="/" replace />;
   }
   return (
     <div>
