@@ -47,6 +47,9 @@ const userSchema = new Schema({
   masks: {
     type: String,
   },
+  bio: {
+    type: String,
+  },
   posts: [
     {
       type: Schema.Types.ObjectId,
