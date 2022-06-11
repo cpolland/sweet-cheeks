@@ -1,13 +1,13 @@
 import { useParams } from "react-router-dom";
-import { from, useQuery } from "@apollo/client";
-import { QUERY_USER } from "../util/queries";
+import {  useQuery } from "@apollo/client";
+import { ME } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 function Profile() {
   const params = useParams();
   console.log(params);
 
-  const { loading, error, data } = useQuery(QUERY_USER, {
+  const { loading, error, data } = useQuery(ME, {
     variables: params,
   });
   console.log(loading);
@@ -15,6 +15,12 @@ function Profile() {
   if (error) {
     console.log(error);
   }
+
+  const individual = data?.me || {};
+  if(loading) {
+    return <div> Loading...</div>;
+  }
+
   return (
     <Container>
       <Row>
@@ -23,7 +29,7 @@ function Profile() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>PlovesTheMist</Card.Text>
+              <Card.Text>{individual.username}</Card.Text>
               <Card.Text>Age: 33</Card.Text>
               <Card.Text>City: San Diego</Card.Text>
             </Card.Body>
