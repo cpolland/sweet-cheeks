@@ -29,6 +29,11 @@ function ViewComments() {
   //   ],
   // };
 
+  const comments = data?.posts || {};
+  if(loading) {
+    return <div> Loading...</div>;
+  }
+
   return (
     <Container>
       <Row>
@@ -37,9 +42,10 @@ function ViewComments() {
             <Card.Body>
               <Card.Title></Card.Title>
               <Card.Subtitle className="mb-2 text-muted">
-                Stephlovesskincare12
+                {comments.username}
               </Card.Subtitle>
               <Card.Text>
+                {comments.posts}
                 Has anyone tried Glossier's new rose water spray?
               </Card.Text>
               <Card.Link href="#">Comment</Card.Link>

@@ -16,7 +16,7 @@ function ViewProfiles() {
     console.log(error);
   }
 
-  const user = data?.findUser || {};
+  const  user = data?.findUser || {};
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -29,7 +29,7 @@ function ViewProfiles() {
               <Card.Title>Profile</Card.Title>
 
               <Card.Text>
-                Stephlovesskincare12
+                {user.username}
               </Card.Text>
               <Card.Text>
                 Age: 24
@@ -70,7 +70,7 @@ function ViewProfiles() {
               <Card.Title>My Skin Bio</Card.Title>
 
               <Card.Text>
-              "Lorem ipsum.................................."
+              {user.post}
               </Card.Text>
             </Card.Body>
           </Card>
