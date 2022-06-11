@@ -23,7 +23,7 @@ function BrowseProfiles() {
     <Container>
       <Row>
         <Col>
-          <Card>
+          <Card bg="info">
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
@@ -37,7 +37,7 @@ function BrowseProfiles() {
       </Row>
       <Row>
         <Col>
-          <Card>
+          <Card bg="light">
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
@@ -51,7 +51,7 @@ function BrowseProfiles() {
       </Row>
       <Row>
         <Col>
-          <Card>
+          <Card bg="info">
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
@@ -65,7 +65,7 @@ function BrowseProfiles() {
       </Row>
       <Row>
         <Col>
-          <Card>
+          <Card bg="#FFF9C4">
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
@@ -79,8 +79,8 @@ function BrowseProfiles() {
       </Row>
       <Row>
         <Col>
-          <Card>
-            <Card.Body>
+          <Card bg="info">
+            <Card.Body text="light">
               <Card.Title>Profile</Card.Title>
 
               <Card.Text>Stephlovesskincare12</Card.Text>

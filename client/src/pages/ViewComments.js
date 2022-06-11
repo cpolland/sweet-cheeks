@@ -1,3 +1,4 @@
+
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_POST } from "../util/queries";
@@ -74,6 +75,7 @@ function ViewComments() {
       </Row>
     </Container>
   );
-}
+
+
 
 export default ViewComments;
