@@ -1,0 +1,29 @@
+
+.sweet-cheeks {
+  display: flex;
+  font-family: 'Rubik Mono One', sans-serif;
+  font-size: 30px;
+  color:white ;
+  padding: 5px;
+  
+}
+
+.navbar {
+  background-color: #8CC0DE;
+}
+
+.welcome{
+    font-family: 'Ruda', sans-serif;
+}
+.home-style {
+    background-color: #FAF0D7;
+    font-family: 'Ruda', sans-serif;
+    padding: 30px;
+    border-width: 20px;
+
+}
+.justify-content-end {
+    font-family: 'Ruda', sans-serif;
+    font-size: 25px;
+}
+
