@@ -1,5 +1,6 @@
 import { useAuth } from "../util/auth";
-import { Button } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import image from "../assets/imgs/Screen Shot 2022-06-07 at 11.16.21 AM.png";
 
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
@@ -8,12 +9,33 @@ export default function Home() {
       {/* TODO: display logged in user's username */}
       <h1>Welcome {isLoggedIn ? user.username : "Guest"}!</h1>
       <hr />
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo cumque
-        explicabo ipsum, facilis repellendus omnis amet in accusantium quisquam
-        nam qui consectetur sunt distinctio nemo molestiae ratione. Iure,
-        aliquam debitis.
-      </p>
+      <Container>
+        <Row>
+          <Col>
+            <Card.Img variant="top" src={image} />
+          </Col>
+          <Col xs={6}>
+            <div className="welcome">
+              <h1>Welcome!</h1>
+              <p>
+                Here at Sweet-Cheeks we promote sisterhood and body positivity!
+                It seems these days skin care has dominated the internet. Our
+                goal is to create a community where everyone can share their
+                skin care regimen and list products they suggest for various
+                skin types. Sign up today and see what other skin care regimes
+                our community is using!
+              </p>
+            </div>
+          </Col>
+        </Row>
+        <Row>
+          <Col>1 of 3</Col>
+          <Col>3 of 3</Col>
+          <Col>3 of 3</Col>
+          <Col>3 of 3</Col>
+          <Col>3 of 3</Col>
+        </Row>
+      </Container>
     </div>
   );
 }
