@@ -22,57 +22,57 @@ export default function Navbar() {
           <NavLink to="/view-profiles/123" className="navbar-link">
             view profile
           </NavLink> */}
-          <div className="nav-links">
-            <p className="text-center mt-4 mb-4"></p>
-            <Nav className="justify-content-end" activeKey="/">
-              <Nav.Item>
-                <Nav.Link as={Link} to="/">
-                  Home
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/community">
-                  Community
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/browse-profiles">
-                  Browse
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} to="/profile">
-                  Profile
-                </Nav.Link>
-              </Nav.Item>
-              <Nav.Item>
-                <Nav.Link as={Link} onClick={logout} to="/">
-                  Sign Out
-                </Nav.Link>
-              </Nav.Item>
-            </Nav>
-          </div>
+
+          <p className="text-center mt-4 mb-4"></p>
+          <Nav className="justify-content-end" activeKey="/">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/">
+                Home
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/community">
+                Community
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/browse-profiles">
+                Browse
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/profile">
+                Profile
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} onClick={logout} to="/">
+                Sign Out
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
           {/* some of these links wont be here later just temp for testing */}
         </>
       ) : (
         <>
           <p className="text-center mt-4 mb-4"></p>
-          <Nav className="justify-content-end" activeKey="/"></Nav>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/">
-              Home
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/login">
-              Log In
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link as={Link} to="/signup">
-              Sign Up
-            </Nav.Link>
-          </Nav.Item>
+          <Nav className="justify-content-end" activeKey="/">
+            <Nav.Item>
+              <Nav.Link as={Link} to="/">
+                Home
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/login">
+                Log In
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link as={Link} to="/signup">
+                Sign Up
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
         </>
       )}
     </nav>

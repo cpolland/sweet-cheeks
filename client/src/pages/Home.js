@@ -5,7 +5,7 @@ import image from "../assets/imgs/Screen Shot 2022-06-07 at 11.16.21 AM.png";
 export default function Home() {
   const { isLoggedIn, user } = useAuth();
   return (
-    <div>
+    <div className="home-style">
       {/* TODO: display logged in user's username */}
       <h1>Welcome {isLoggedIn ? user.username : "Guest"}!</h1>
       <hr />
@@ -27,13 +27,6 @@ export default function Home() {
               </p>
             </div>
           </Col>
-        </Row>
-        <Row>
-          <Col>1 of 3</Col>
-          <Col>3 of 3</Col>
-          <Col>3 of 3</Col>
-          <Col>3 of 3</Col>
-          <Col>3 of 3</Col>
         </Row>
       </Container>
     </div>
