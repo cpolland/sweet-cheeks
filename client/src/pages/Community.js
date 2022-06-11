@@ -4,7 +4,7 @@ import { QUERY_POST } from '../util/queries';
 
 import PostList from '../components/PostList';
 import PostForm from '../components/PostForm';
-import React from 'react';
+import { Card, Button } from 'react-bootstrap';
 
 
 
@@ -25,36 +25,47 @@ const Community = () => {
   }
   return (
 
-    <div className="my-3">
-      <h3 className="card-header bg-dark text-light p-2 m-0">
-        {post.username} <br />
-        <span style={{ fontSize: '1rem' }}>
-          posted on {post.createdAt}
-        </span>
-      </h3>
+    <container>
+    <Card>
+    <Card.Header>Community</Card.Header>
+    <Card.Body>
+    <Card.Title>Stephlovesskincare12</Card.Title>
+    <Card.Text>
+      Has anyone tried Glossiers new rose water spray?
+    </Card.Text>
+    <Button variant="info">Comment</Button>
+    <Button variant="info">View comments</Button>
+    </Card.Body>
+    </Card>
+    
+    
+    <Card>
+    <Card.Header>Community</Card.Header>
+    <Card.Body>
+    <Card.Title>Stephlovesskincare12</Card.Title>
+    <Card.Text>
+      Opinions on the new Summer Friday face mask?
+    </Card.Text>
+    <Button variant="info">Comment</Button>
+    <Button variant="info">View comments</Button>
+    </Card.Body>
+    </Card>
 
+    <Card>
+    <Card.Header>Community</Card.Header>
+    <Card.Body>
+    <Card.Title>Stephlovesskincare12</Card.Title>
+    <Card.Text>
+      Who's tried the Cerave moisturizer?
+    </Card.Text>
+    <Button variant="info">Comment</Button>
+    <Button variant="info">View comments</Button>
+    </Card.Body>
+    </Card>
 
-      <div className="bg-light py-4">
-        <blockquote
-          className="p-4"
-          style={{
-            fontSize: '1.5rem',
-            fontStyle: 'italic',
-            border: '2px solid #1a1a1a',
-            lineHeight: '1.5',
-          }}
-        >
-          {post.postText}
-        </blockquote>
-      </div>
-
-      <div className="my-5">
-        <PostList comments={post.comments} />
-      </div> 
-      <div className="m-3 p-4" style={{ border: '1px solid #1a1a1a' }}>
-        <PostForm postId={post._id} />
-      </div>
-    </div>
+    </container>
+    
+    
   );
 };
 
