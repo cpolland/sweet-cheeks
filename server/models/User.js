@@ -44,9 +44,6 @@ const userSchema = new Schema({
   serums: {
     type: String,
   },
-  masks: {
-    type: String,
-  },
   bio: {
     type: String,
   },

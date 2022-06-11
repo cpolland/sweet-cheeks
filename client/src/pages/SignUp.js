@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useAuth } from "../util/auth";
+import { QUERY_USER } from "../util/queries";
+import { useMutation } from "@apollo/client";
 
 // This signup form is intentionally minimalist to reduce effort required to
 // customize it to your app's needs. See the excellent best practices guide for
@@ -25,9 +27,9 @@ const initialFormState = {
   age: "",
   city: "",
   skinType: "",
-  clenser: "",
+  cleanser: "",
   toner: "",
-  mosturizer: "",
+  moisturizer: "",
   serums: "",
   bio: "",
 };
@@ -50,6 +52,7 @@ export default function SignUp() {
 
   const handleSubmit = async (evt) => {
     evt.preventDefault();
+    console.log(formState);
     signup(formState);
   };
 
@@ -141,39 +144,39 @@ export default function SignUp() {
           </label>
           <input
             disabled={loading}
-            id="skin-type"
+            id="skinType"
             type="text"
-            name="skin-type"
+            name="skinType"
             placeholder="Enter your skin type"
             value={formState.skinType.value}
             onChange={handleInputChange}
           />
         </div>
         <div style={styles.formControl}>
-          <label htmlFor="clenser" style={styles.label}>
-            Clenser
+          <label htmlFor="cleanser" style={styles.label}>
+            Cleanser
           </label>
           <input
             disabled={loading}
-            id="clenser"
+            id="cleanser"
             type="text"
-            name="clenser"
-            placeholder="Enter your clenser"
-            value={formState.clenser.value}
+            name="cleanser"
+            placeholder="Enter your cleanser"
+            value={formState.cleanser.value}
             onChange={handleInputChange}
           />
         </div>
         <div style={styles.formControl}>
           <label htmlFor="moisturizer" style={styles.label}>
-            Mosturizer
+            Moisturizer
           </label>
           <input
             disabled={loading}
-            id="mosturizer"
+            id="moisturizer"
             type="text"
-            name="mosturizer"
-            placeholder="Enter your mosturizer"
-            value={formState.mosturizer.value}
+            name="moisturizer"
+            placeholder="Enter your moisturizer"
+            value={formState.moisturizer.value}
             onChange={handleInputChange}
           />
         </div>

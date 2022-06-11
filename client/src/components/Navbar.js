@@ -1,10 +1,14 @@
 import { NavLink } from "react-router-dom";
 import { useAuth } from "../util/auth";
+import Navbar from "react-bootstrap/Navbar";
+// import { Container } from "react-bootstrap";
+// import React from "react";
+
 import "./Navbar.css";
 import { Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbars() {
   const { isLoggedIn, logout } = useAuth();
   return (
     <nav className="navbar">

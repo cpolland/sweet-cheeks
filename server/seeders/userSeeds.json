@@ -6,7 +6,7 @@
       "age": "28",
       "city": "Denver",
       "skinType": "oily-dry",
-      "clenser": "glossier milk clenser",
+      "cleanser": "glossier milk cleanser",
       "toner": "the ordinary rose toner",
       "moisturizer": "burt bees",
       "serums": "biore overnight repair"
@@ -19,9 +19,9 @@
         "age": "25",
         "city": "San Diego",
         "skinType": "oily-dry",
-        "clenser": "avuve clenser",
+        "cleanser": "avuve cleanser",
         "toner": "the ordinary rose toner",
-        "moisturizer": "cliniqe",
+        "moisturizer": "clinique",
         "serums": "vitmin c serum"
         
       }

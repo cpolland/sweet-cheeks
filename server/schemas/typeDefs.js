@@ -28,10 +28,10 @@ const typeDefs = gql`
   }
 
   type User {
-    _id: ID!
-    username: String!
-    email: String!
-    lastLogin: Date!
+    _id: ID
+    username: String
+    email: String
+    lastLogin: Date
     age: Int
     city: String
     skinType: String
@@ -39,16 +39,16 @@ const typeDefs = gql`
     toner: String
     moisturizer: String
     serums: String
-    masks: String
+    bio: String
     post: [Post]
   }
 
   type Post {
-    _id: ID!
+    _id: ID
     author: String
     createdAt: String
     postText: String
-    comments: [Comment]!
+    comments: [Comment]
   }
 
   type Comment {
