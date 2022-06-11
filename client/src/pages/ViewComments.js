@@ -1,4 +1,3 @@
-
 import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_POST } from "../util/queries";
@@ -31,7 +30,7 @@ function ViewComments() {
   // };
 
   const comments = data?.posts || {};
-  if(loading) {
+  if (loading) {
     return <div> Loading...</div>;
   }
 
@@ -58,24 +57,21 @@ function ViewComments() {
             <Card.Body>
               <Card.Title></Card.Title>
               <Card.Text>
-                Yes I love it so much!. So Fresh, Put it in the fridge for a cooling feel!! 💙
+                Yes I love it so much!. So Fresh, Put it in the fridge for a
+                cooling feel!! 💙
               </Card.Text>
             </Card.Body>
-            </Card>
+          </Card>
           <Card border="info" style={{ width: "18rem" }}>
             <Card.Header>DewYsKnnLife</Card.Header>
             <Card.Body>
               <Card.Title></Card.Title>
-              <Card.Text>
-                OMG! Can't wait to try! 
-              </Card.Text>
+              <Card.Text>OMG! Can't wait to try!</Card.Text>
             </Card.Body>
           </Card>
         </Col>
       </Row>
     </Container>
   );
-
-
-
+}
 export default ViewComments;
