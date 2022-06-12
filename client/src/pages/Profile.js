@@ -2,6 +2,8 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { ME } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import "./Profile.css"
+import Stack from 'react-bootstrap/Stack'
 
 function Profile() {
   const params = useParams();
@@ -25,6 +27,7 @@ function Profile() {
     <Container>
       <Row>
         <Col>
+        <Stack gap={2} className="col-md-5 mx-auto">
           <Card>
             <Card.Body>
               <Card.Title>Profile</Card.Title>
@@ -45,7 +48,9 @@ function Profile() {
               </Card.Text>
             </Card.Body>
           </Card>
+          </Stack>
         </Col>
+
 
         <Col>
           <Card>

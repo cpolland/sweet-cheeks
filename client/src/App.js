@@ -14,13 +14,17 @@ import ProtectedPageExample from "./pages/ProtectedPageExample";
 import SignUp from "./pages/SignUp";
 import { client } from "./util/apolloClient";
 import { AuthProvider } from "./util/auth";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
     <ApolloProvider client={client}>
       <Router>
         <AuthProvider>
+          <div className="flex-column justify-flex-start min-100-vh">
           <Navbar />
+         <div className="container">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
@@ -42,6 +46,9 @@ function App() {
               }
             />
           </Routes>
+          </div>
+          <Footer/>
+          </div>
         </AuthProvider>
       </Router>
     </ApolloProvider>
