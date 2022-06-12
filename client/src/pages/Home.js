@@ -20,7 +20,7 @@ export default function Home() {
               <p>
                 Here at Sweet-Cheeks we promote sisterhood and body positivity!
                 These days, skincare has dominated the internet. Our goal is to
-                create a community where everyone can share their skin care
+                create a community where everyone can share their skincare
                 regimen and list products they suggest for various skin types.
                 Sign up today and see what other skincare regimens our community
                 is using!

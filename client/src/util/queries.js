@@ -61,7 +61,7 @@ export const FIND_USER = gql`
 `;
 
 export const QUERY_USER = gql`
-  query Users {
+  query users {
     users {
       _id
       username
