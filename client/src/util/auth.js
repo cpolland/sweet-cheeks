@@ -108,17 +108,65 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const signup = async ({ email, password, username, city, age }) => {
+  const signup = async ({
+    email,
+    password,
+    username,
+    city,
+    age,
+    toner,
+    skinType,
+    cleanser,
+    moisturizer,
+    serums,
+    bio,
+  }) => {
     dispatch({ type: LOADING });
     try {
       // TODO: implement improved validation.
-      if (!email || !password || !username || !city || !age) {
+      if (
+        !email ||
+        !password ||
+        !username ||
+        !city ||
+        !age ||
+        !toner ||
+        !skinType ||
+        !cleanser ||
+        !moisturizer ||
+        !serums ||
+        !bio
+      ) {
         // TODO: implement improved error message
         throw new Error("Auth error. Invalid parameter received.");
       }
-      console.log(email, password, username, city, age);
+      console.log(
+        email,
+        password,
+        username,
+        city,
+        age,
+        toner,
+        skinType,
+        cleanser,
+        moisturizer,
+        serums,
+        bio
+      );
       const { data } = await createUser({
-        variables: { email, password, username, city, age },
+        variables: {
+          email,
+          password,
+          username,
+          city,
+          age,
+          toner,
+          skinType,
+          cleanser,
+          moisturizer,
+          serums,
+          bio,
+        },
       });
       console.log(data);
       dispatch({ type: LOGIN_SUCCESS, payload: data.createUser.token });

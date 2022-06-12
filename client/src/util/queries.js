@@ -8,6 +8,7 @@ export const ME = gql`
       email
       age
       city
+      toner
     }
   }
 `;

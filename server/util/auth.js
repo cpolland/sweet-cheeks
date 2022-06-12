@@ -13,7 +13,12 @@ const signToken = (user) => {
     email: user.email,
     username: user.username,
     city: user.city,
-    age: user.age,
+    toner: user.toner,
+    skinType: user.skinType,
+    cleanser: user.cleanser,
+    moisturizer: user.moisturizer,
+    serums: user.serums,
+    bio: user.bio,
   };
   return jwt.sign({ data }, SECRET, {
     expiresIn: TOKEN_EXP,

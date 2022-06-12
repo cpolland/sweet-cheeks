@@ -20,6 +20,12 @@ const typeDefs = gql`
       username: String!
       city: String!
       age: String!
+      skinType: String!
+      toner: String!
+      cleanser: String!
+      moisturizer: String!
+      serums: String!
+      bio: String!
     ): Auth
     login(email: String!, password: String!): Auth
     addPost(postText: String!): Post

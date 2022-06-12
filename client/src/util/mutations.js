@@ -7,9 +7,9 @@ export const CREATE_USER = gql`
     $username: String!
     $city: String!
     $age: String!
+    $toner: String!
     $skinType: String!
     $cleanser: String!
-    $toner: String!
     $moisturizer: String!
     $serums: String!
     $bio: String!
@@ -20,6 +20,12 @@ export const CREATE_USER = gql`
       username: $username
       city: $city
       age: $age
+      toner: $toner
+      skinType: $skinType
+      cleanser: $cleanser
+      moisturizer: $moisturizer
+      serums: $serums
+      bio: $bio
     ) {
       token
       user {
