@@ -19,11 +19,11 @@ export default function Home() {
               <h1>Welcome!</h1>
               <p>
                 Here at Sweet-Cheeks we promote sisterhood and body positivity!
-                It seems these days skin care has dominated the internet. Our
-                goal is to create a community where everyone can share their
-                skin care regimen and list products they suggest for various
-                skin types. Sign up today and see what other skin care regimes
-                our community is using!
+                These days, skin care has dominated the internet. Our goal is to
+                create a community where everyone can share their skin care
+                regimen and list products they suggest for various skin types.
+                Sign up today and see what other skincare regimens our community
+                is using!
               </p>
             </div>
           </Col>
