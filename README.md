@@ -14,7 +14,13 @@ What are the steps required to install your project? Provide a step-by-step desc
     ![alt text](assets/images/screenshot.png)
     ```
 
+The npm install script: Installs all dependencies for root as wells as client and server.
+npm run develop script: Uses concurrently to run the back-end with nodemon and launches the create-react-app development server for front-end development.
+
 ## Credits
+
+Deployed application:
+GitHub: https://github.com/cpolland/sweet-cheeks
 
 Collaborators:
 Cody Polland, https://github.com/cpolland
