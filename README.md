@@ -6,16 +6,14 @@ Our skin is the largest organ in the body, protecting us from outside elements. 
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+The npm install script: Installs all dependencies for root as wells as client and server.
+npm run develop script: Uses concurrently to run the back-end with nodemon and launches the create-react-app development server for front-end development.
 
 ## Usage
 
     ```md
     ![alt text](assets/images/screenshot.png)
     ```
-
-The npm install script: Installs all dependencies for root as wells as client and server.
-npm run develop script: Uses concurrently to run the back-end with nodemon and launches the create-react-app development server for front-end development.
 
 ## Credits
 
