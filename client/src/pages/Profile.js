@@ -42,9 +42,17 @@ function Profile() {
               <Card.Title>Skin Regime</Card.Title>
 
               <Card.Text>
-                Skin type: Dry-sensitive Cleanser: Glossier Milk Wash Toner: The
-                Ordinary Toner Mosturizer/SPF: Glow Recipe: Plump creme Masks:
-                Holler & Glow eye Masks Serums:""
+             Skin Type: {individual.skinType} <br>
+             </br>
+             Cleanser: {individual.cleanser} <br>
+             </br>
+             Toner: {individual.toner}  <br>
+             </br> 
+             Mosturizer: {individual.moisturizer} <br>
+             </br> 
+             Serums: {individual.serums}   
+                
+                
               </Card.Text>
             </Card.Body>
           </Card>
@@ -58,7 +66,8 @@ function Profile() {
               <Card.Title>My Skin Bio</Card.Title>
 
               <Card.Text>
-                "Lorem ipsum.................................."
+                {individual.bio}
+                
               </Card.Text>
             </Card.Body>
           </Card>

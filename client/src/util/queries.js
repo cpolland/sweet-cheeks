@@ -8,7 +8,12 @@ export const ME = gql`
       email
       age
       city
+      skinType
+      cleanser
       toner
+      moisturizer
+      serums
+      bio
     }
   }
 `;
@@ -37,6 +42,14 @@ export const FIND_USER = gql`
       _id
       username
       email
+      age
+      city
+      skinType
+      cleanser
+      toner
+      moisturizer
+      serums
+      bio
       post {
         _id
         author
@@ -101,3 +114,17 @@ export const QUERY_COMMENTS = gql`
     }
   }
 `;
+
+//was trying to get browse profiles to render data
+
+// export const BROWSE_USERS = gql`
+// query BrowseUsers {
+//   Users {
+//     username
+//     post {
+//       _id
+//       author
+//     }
+//   }
+// }
+// `;
