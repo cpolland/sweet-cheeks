@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import {  useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { ME } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
@@ -17,7 +17,7 @@ function Profile() {
   }
 
   const individual = data?.me || {};
-  if(loading) {
+  if (loading) {
     return <div> Loading...</div>;
   }
 
@@ -30,8 +30,8 @@ function Profile() {
               <Card.Title>Profile</Card.Title>
 
               <Card.Text>{individual.username}</Card.Text>
-              <Card.Text>Age: 33</Card.Text>
-              <Card.Text>City: San Diego</Card.Text>
+              <Card.Text>Age:{individual.age}</Card.Text>
+              <Card.Text>City:{individual.city}</Card.Text>
             </Card.Body>
           </Card>
           <Card>

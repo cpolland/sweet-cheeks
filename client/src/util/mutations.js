@@ -1,14 +1,46 @@
 import { gql } from "@apollo/client";
 
 export const CREATE_USER = gql`
-  mutation CreateUser($email: String!, $password: String!, $username: String!) {
+  mutation createUser(
+    $email: String!
+    $password: String!
+    $username: String!
+    $city: String!
+    $age: String!
+    $toner: String!
+    $skinType: String!
+    $cleanser: String!
+    $moisturizer: String!
+    $serums: String!
+    $bio: String!
+  ) {
     createUser(
       email: $email
       password: $password
       username: $username
+      city: $city
       age: $age
+      toner: $toner
+      skinType: $skinType
+      cleanser: $cleanser
+      moisturizer: $moisturizer
+      serums: $serums
+      bio: $bio
     ) {
       token
+      user {
+        _id
+        username
+        email
+        age
+        city
+        skinType
+        cleanser
+        toner
+        moisturizer
+        serums
+        bio
+      }
     }
   }
 `;
@@ -35,10 +67,14 @@ export const ADD_POST = gql`
 
 export const ADD_COMMENT = gql`
   mutation addComment($postId: ID!, $commentText: String!, $username: String!) {
-    addComment(postId: $postId, commentText: $commentText, username: $username) {
+    addComment(
+      postId: $postId
+      commentText: $commentText
+      username: $username
+    ) {
       _id
       username
       commentText
     }
   }
-  `;
+`;

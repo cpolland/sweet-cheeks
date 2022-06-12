@@ -14,7 +14,19 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    createUser(email: String!, password: String!, username: String!): Auth
+    createUser(
+      email: String!
+      password: String!
+      username: String!
+      city: String!
+      age: String!
+      skinType: String!
+      toner: String!
+      cleanser: String!
+      moisturizer: String!
+      serums: String!
+      bio: String!
+    ): Auth
     login(email: String!, password: String!): Auth
     addPost(postText: String!): Post
     addComment(postId: ID!, commentText: String!, username: String!): Comment
@@ -32,7 +44,7 @@ const typeDefs = gql`
     username: String
     email: String
     lastLogin: Date
-    age: Int
+    age: String
     city: String
     skinType: String
     cleanser: String
