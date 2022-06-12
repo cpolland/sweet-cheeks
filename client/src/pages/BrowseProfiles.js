@@ -15,11 +15,15 @@ function BrowseProfiles() {
   if (error) {
     console.log(error);
   }
-  const user = data?.findUser || {};
+  const user = data?.findUsers || {};
   if (loading) {
     return <div>Loading...</div>;
   }
   return (
+    // <ul>
+    //   {data.map(user => (
+    //     <li key={user.BrowseProfiles}></li>
+    //   ))}
     <Container>
       <Row>
         <Col>
@@ -92,6 +96,7 @@ function BrowseProfiles() {
         </Col>
       </Row>
     </Container>
+    // </ul>
   );
 
   // function BrowseProfile() {
