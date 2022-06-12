@@ -1,7 +1,9 @@
 import { useParams } from "react-router-dom";
-import {  useQuery } from "@apollo/client";
+import { useQuery } from "@apollo/client";
 import { ME } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
+import "./Profile.css"
+import Stack from 'react-bootstrap/Stack'
 
 function Profile() {
   const params = useParams();
@@ -17,7 +19,7 @@ function Profile() {
   }
 
   const individual = data?.me || {};
-  if(loading) {
+  if (loading) {
     return <div> Loading...</div>;
   }
 
@@ -25,13 +27,14 @@ function Profile() {
     <Container>
       <Row>
         <Col>
+        <Stack gap={2} className="col-md-5 mx-auto">
           <Card>
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
               <Card.Text>{individual.username}</Card.Text>
-              <Card.Text>Age: 33</Card.Text>
-              <Card.Text>City: San Diego</Card.Text>
+              <Card.Text>Age:{individual.age}</Card.Text>
+              <Card.Text>City:{individual.city}</Card.Text>
             </Card.Body>
           </Card>
           <Card>
@@ -45,7 +48,9 @@ function Profile() {
               </Card.Text>
             </Card.Body>
           </Card>
+          </Stack>
         </Col>
+
 
         <Col>
           <Card>

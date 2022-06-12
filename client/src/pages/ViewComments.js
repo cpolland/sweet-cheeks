@@ -38,6 +38,7 @@ function ViewComments() {
     <Container>
       <Row>
         <Col>
+        
           <Card>
             <Card.Body>
               <Card.Title></Card.Title>
