@@ -1,5 +1,5 @@
 import { useAuth } from "../util/auth";
-import { Container, Row, Col, Card, Button } from "react-bootstrap";
+import { Container, Row, Col, Card } from "react-bootstrap";
 import image from "../assets/imgs/Screen Shot 2022-06-07 at 11.16.21 AM.png";
 
 export default function Home() {
