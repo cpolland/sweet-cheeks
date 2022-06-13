@@ -34,7 +34,7 @@ function Profile() {
                 <Card.Title>Profile</Card.Title>
 
                 <Card.Text>{individual.username}</Card.Text>
-                <Card.Text>Age:{individual.age}</Card.Text>
+                <Card.Text>Age{individual.age}</Card.Text>
                 <Card.Text>City: {individual.city}</Card.Text>
               </Card.Body>
             </Card>
