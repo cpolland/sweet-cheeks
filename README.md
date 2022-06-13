@@ -15,7 +15,7 @@ npm run develop script: Uses concurrently to run the back-end with nodemon and l
 
 ## Credits
 
-Deployed application:
+Deployed application: https://agile-beyond-87393.herokuapp.com/
 GitHub: https://github.com/cpolland/sweet-cheeks
 
 Collaborators:
