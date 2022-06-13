@@ -18,26 +18,21 @@ export const ME = gql`
   }
 `;
 
-// skinType
-// cleanser
-// toner
-// moisturizer
-// serums
-// bio
-// post
 export const QUERY_USERS = gql`
-  query getUsers {
+  query users {
     posts {
       _id
       lastLogin
       username
       email
+      age
+      city
     }
   }
 `;
 
 export const FIND_USER = gql`
-  query FindUser($userId: ID!) {
+  query findUser($userId: ID!) {
     findUser(userId: $userId) {
       _id
       username
@@ -74,7 +69,6 @@ export const QUERY_USER = gql`
       toner
       moisturizer
       serums
-      masks
       post {
         _id
         author
