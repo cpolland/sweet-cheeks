@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
@@ -50,7 +50,9 @@ function BrowseProfiles() {
               <Card.Text>Stephlovesskincare12</Card.Text>
               <Card.Text>Age: 24</Card.Text>
               <Card.Text>City: Denver</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -64,7 +66,9 @@ function BrowseProfiles() {
               <Card.Text>Stephlovesskincare12</Card.Text>
               <Card.Text>Age: 24</Card.Text>
               <Card.Text>City: Denver</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -78,7 +82,9 @@ function BrowseProfiles() {
               <Card.Text>Stephlovesskincare12</Card.Text>
               <Card.Text>Age: 24</Card.Text>
               <Card.Text>City: Denver</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -92,7 +98,9 @@ function BrowseProfiles() {
               <Card.Text>Stephlovesskincare12</Card.Text>
               <Card.Text>Age: 24</Card.Text>
               <Card.Text>City: Denver</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
             </Card.Body>
           </Card>
         </Col>
