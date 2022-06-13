@@ -29,7 +29,7 @@ const Community = () => {
     <Card>
     <Card.Header>Community</Card.Header>
     <Card.Body>
-    <Card.Title>Stephlovesskincare12</Card.Title>
+    <Card.Title>Beautylover12</Card.Title>
     <Card.Text>
       Has anyone tried Glossiers new rose water spray?
     </Card.Text>
@@ -54,7 +54,7 @@ const Community = () => {
     <Card>
     <Card.Header>Community</Card.Header>
     <Card.Body>
-    <Card.Title>Stephlovesskincare12</Card.Title>
+    <Card.Title>Haley1234</Card.Title>
     <Card.Text>
       Who's tried the Cerave moisturizer?
     </Card.Text>
