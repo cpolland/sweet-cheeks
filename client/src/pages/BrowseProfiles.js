@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
-import { QUERY_USER, FIND_USER } from "../util/queries";
+import { QUERY_USER } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 function BrowseProfiles() {
