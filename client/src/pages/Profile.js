@@ -2,8 +2,8 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { ME } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import "./Profile.css"
-import Stack from 'react-bootstrap/Stack'
+import "./Profile.css";
+import Stack from "react-bootstrap/Stack";
 
 function Profile() {
   const params = useParams();
@@ -22,35 +22,35 @@ function Profile() {
   if (loading) {
     return <div> Loading...</div>;
   }
+  console.log(params);
 
   return (
     <Container>
       <Row>
         <Col>
-        <Stack gap={2} className="col-md-5 mx-auto">
-          <Card>
-            <Card.Body>
-              <Card.Title>Profile</Card.Title>
+          <Stack gap={2} className="col-md-5 mx-auto">
+            <Card>
+              <Card.Body>
+                <Card.Title>Profile</Card.Title>
 
-              <Card.Text>{individual.username}</Card.Text>
-              <Card.Text>Age:{individual.age}</Card.Text>
-              <Card.Text>City:{individual.city}</Card.Text>
-            </Card.Body>
-          </Card>
-          <Card>
-            <Card.Body>
-              <Card.Title>Skin Regime</Card.Title>
+                <Card.Text>{individual.username}</Card.Text>
+                <Card.Text>Age:{individual.age}</Card.Text>
+                <Card.Text>City:{individual.city}</Card.Text>
+              </Card.Body>
+            </Card>
+            <Card>
+              <Card.Body>
+                <Card.Title>Skin Regime</Card.Title>
 
-              <Card.Text>
-                Skin type: Dry-sensitive Cleanser: Glossier Milk Wash Toner: The
-                Ordinary Toner Mosturizer/SPF: Glow Recipe: Plump creme Masks:
-                Holler & Glow eye Masks Serums:""
-              </Card.Text>
-            </Card.Body>
-          </Card>
+                <Card.Text>
+                  Skin type: Dry-sensitive Cleanser: Glossier Milk Wash Toner:
+                  The Ordinary Toner Mosturizer/SPF: Glow Recipe: Plump creme
+                  Masks: Holler & Glow eye Masks Serums:""
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </Stack>
         </Col>
-
 
         <Col>
           <Card>
