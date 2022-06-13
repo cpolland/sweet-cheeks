@@ -33,17 +33,23 @@ function ViewProfiles() {
               <Card.Title>Profile</Card.Title>
 
               <Card.Text>{user.username}</Card.Text>
-              <Card.Text>Age: 24</Card.Text>
-              <Card.Text>City: Denver</Card.Text>
+              <Card.Text>{user.age}</Card.Text>
+              <Card.Text>{user.city}</Card.Text>
             </Card.Body>
           </Card>
           <Card className="card">
             <Card.Body>
               <Card.Title>Skin Regime</Card.Title>
               <Card.Text>
-                Skin type: Dry-sensitive Cleanser: Glossier Milk Wash Toner: The
-                Ordinary Toner Mosturizer/SPF: Glow Recipe: Plump creme Masks:
-                Holler & Glow eye Masks Serums:""
+              Skin Type: {user.skinType} <br>
+             </br>
+             Cleanser: {user.cleanser} <br>
+             </br>
+             Toner: {user.toner}  <br>
+             </br> 
+             Mosturizer: {user.moisturizer} <br>
+             </br> 
+             Serums: {user.serums}   
               </Card.Text>
             </Card.Body>
           </Card>
@@ -55,7 +61,7 @@ function ViewProfiles() {
             <Card.Body>
               <Card.Title>My Skin Bio</Card.Title>
 
-              <Card.Text>{user.post}</Card.Text>
+              <Card.Text>{user.bio}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
