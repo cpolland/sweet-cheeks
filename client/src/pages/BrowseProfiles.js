@@ -33,9 +33,9 @@ function BrowseProfiles() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>{user.username}</Card.Text>
-              <Card.Text>Age: {user.age}</Card.Text>
-              <Card.Text>City: {user.city}</Card.Text>
+              <Card.Text>codyskincare{user.username}</Card.Text>
+              <Card.Text>Age:28 {user.age}</Card.Text>
+              <Card.Text>City:Denver {user.city}</Card.Text>
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
@@ -55,7 +55,6 @@ function BrowseProfiles() {
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
-              
             </Card.Body>
           </Card>
         </Col>
@@ -72,7 +71,6 @@ function BrowseProfiles() {
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
-
             </Card.Body>
           </Card>
         </Col>
@@ -89,7 +87,6 @@ function BrowseProfiles() {
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
-
             </Card.Body>
           </Card>
         </Col>
@@ -106,7 +103,6 @@ function BrowseProfiles() {
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
-
             </Card.Body>
           </Card>
         </Col>
