@@ -1,4 +1,4 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER } from "../util/queries";
 import { Container, Row, Col, Card } from "react-bootstrap";
@@ -15,10 +15,12 @@ function BrowseProfiles() {
   if (error) {
     console.log(error);
   }
-  const user = data?.findUsers || {};
+
+  const user = data?.users || {};
   if (loading) {
     return <div>Loading...</div>;
   }
+  console.log(user);
   return (
     // <ul>
     //   {data.map(user => (
@@ -31,10 +33,12 @@ function BrowseProfiles() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>Stephlovesskincare12</Card.Text>
-              <Card.Text>Age: 24</Card.Text>
-              <Card.Text>City: Denver</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Text>{user.username}</Card.Text>
+              <Card.Text>Age: {user.age}</Card.Text>
+              <Card.Text>City: {user.city}</Card.Text>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -48,7 +52,10 @@ function BrowseProfiles() {
               <Card.Text>AmyL23</Card.Text>
               <Card.Text>Age: 30</Card.Text>
               <Card.Text>City: Los Angeles</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
+              
             </Card.Body>
           </Card>
         </Col>
@@ -62,7 +69,10 @@ function BrowseProfiles() {
               <Card.Text>PeterK</Card.Text>
               <Card.Text>Age: 27</Card.Text>
               <Card.Text>City: El Cajon</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
+
             </Card.Body>
           </Card>
         </Col>
@@ -76,7 +86,10 @@ function BrowseProfiles() {
               <Card.Text>KendallJones33</Card.Text>
               <Card.Text>Age: 35</Card.Text>
               <Card.Text>City: San Diego</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
+
             </Card.Body>
           </Card>
         </Col>
@@ -90,7 +103,10 @@ function BrowseProfiles() {
               <Card.Text>HaileyB</Card.Text>
               <Card.Text>Age: 28</Card.Text>
               <Card.Text>City: Chicago</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
+
             </Card.Body>
           </Card>
         </Col>
