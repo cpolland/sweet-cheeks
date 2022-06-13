@@ -15,10 +15,12 @@ function BrowseProfiles() {
   if (error) {
     console.log(error);
   }
-  const users = data?.users || {};
+
+  const user = data?.users || {};
   if (loading) {
     return <div>Loading...</div>;
   }
+  console.log(user);
   return (
     // <ul>
     //   {data.map(user => (
@@ -31,12 +33,10 @@ function BrowseProfiles() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>{users.username}</Card.Text>
-              <Card.Text>Age:{users.age}</Card.Text>
-              <Card.Text>City:{users.city}</Card.Text>
-              <Card.Link as={Link} to="/view-profiles/:userId">
-                View Profile
-              </Card.Link>
+              <Card.Text>{user.username}</Card.Text>
+              <Card.Text>Age: {user.age}</Card.Text>
+              <Card.Text>City: {user.city}</Card.Text>
+              <Card.Link href="#">View Profile</Card.Link>
             </Card.Body>
           </Card>
         </Col>

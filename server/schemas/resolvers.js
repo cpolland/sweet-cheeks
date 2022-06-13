@@ -21,7 +21,7 @@ const resolvers = {
       return User.findOne({ userId });
     },
     users: async () => {
-      return User.find().populate("posts");
+      return User.find().populate("users");
     },
     posts: async () => {
       return Post.find().populate("comments");
