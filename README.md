@@ -12,7 +12,6 @@ npm run develop script: Uses concurrently to run the back-end with nodemon and l
 ## Usage
 
 ![alt text](assets/images/screenshot.png)
-   
 
 ## Credits
 

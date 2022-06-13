@@ -35,28 +35,22 @@ function Profile() {
 
                 <Card.Text>{individual.username}</Card.Text>
                 <Card.Text>Age:{individual.age}</Card.Text>
-                <Card.Text>City:{individual.city}</Card.Text>
+                <Card.Text>City: {individual.city}</Card.Text>
               </Card.Body>
             </Card>
             <Card>
               <Card.Body>
                 <Card.Title>Skin Regime</Card.Title>
 
-              <Card.Text>
-             Skin Type: {individual.skinType} <br>
-             </br>
-             Cleanser: {individual.cleanser} <br>
-             </br>
-             Toner: {individual.toner}  <br>
-             </br> 
-             Mosturizer: {individual.moisturizer} <br>
-             </br> 
-             Serums: {individual.serums}   
-                
-                
-              </Card.Text>
-            </Card.Body>
-          </Card>
+                <Card.Text>
+                  Skin Type: {individual.skinType} <br></br>
+                  Cleanser: {individual.cleanser} <br></br>
+                  Toner: {individual.toner} <br></br>
+                  Mosturizer: {individual.moisturizer} <br></br>
+                  Serums: {individual.serums}
+                </Card.Text>
+              </Card.Body>
+            </Card>
           </Stack>
         </Col>
 
@@ -65,10 +59,7 @@ function Profile() {
             <Card.Body>
               <Card.Title>My Skin Bio</Card.Title>
 
-              <Card.Text>
-                {individual.bio}
-                
-              </Card.Text>
+              <Card.Text>{individual.bio}</Card.Text>
             </Card.Body>
           </Card>
         </Col>
