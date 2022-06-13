@@ -36,7 +36,9 @@ function BrowseProfiles() {
               <Card.Text>{user.username}</Card.Text>
               <Card.Text>Age: {user.age}</Card.Text>
               <Card.Text>City: {user.city}</Card.Text>
-              <Card.Link href="#">View Profile</Card.Link>
+              <Card.Link as={Link} to="/view-profiles/:userId">
+                View Profile
+              </Card.Link>
             </Card.Body>
           </Card>
         </Col>
@@ -47,12 +49,13 @@ function BrowseProfiles() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>Stephlovesskincare12</Card.Text>
-              <Card.Text>Age: 24</Card.Text>
-              <Card.Text>City: Denver</Card.Text>
+              <Card.Text>AmyL23</Card.Text>
+              <Card.Text>Age: 30</Card.Text>
+              <Card.Text>City: Los Angeles</Card.Text>
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
+              
             </Card.Body>
           </Card>
         </Col>
@@ -63,12 +66,13 @@ function BrowseProfiles() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>Stephlovesskincare12</Card.Text>
-              <Card.Text>Age: 24</Card.Text>
-              <Card.Text>City: Denver</Card.Text>
+              <Card.Text>PeterK</Card.Text>
+              <Card.Text>Age: 27</Card.Text>
+              <Card.Text>City: El Cajon</Card.Text>
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
+
             </Card.Body>
           </Card>
         </Col>
@@ -79,12 +83,13 @@ function BrowseProfiles() {
             <Card.Body>
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>Stephlovesskincare12</Card.Text>
-              <Card.Text>Age: 24</Card.Text>
-              <Card.Text>City: Denver</Card.Text>
+              <Card.Text>KendallJones33</Card.Text>
+              <Card.Text>Age: 35</Card.Text>
+              <Card.Text>City: San Diego</Card.Text>
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
+
             </Card.Body>
           </Card>
         </Col>
@@ -95,12 +100,13 @@ function BrowseProfiles() {
             <Card.Body text="light">
               <Card.Title>Profile</Card.Title>
 
-              <Card.Text>Stephlovesskincare12</Card.Text>
-              <Card.Text>Age: 24</Card.Text>
-              <Card.Text>City: Denver</Card.Text>
+              <Card.Text>HaileyB</Card.Text>
+              <Card.Text>Age: 28</Card.Text>
+              <Card.Text>City: Chicago</Card.Text>
               <Card.Link as={Link} to="/view-profiles/:userId">
                 View Profile
               </Card.Link>
+
             </Card.Body>
           </Card>
         </Col>

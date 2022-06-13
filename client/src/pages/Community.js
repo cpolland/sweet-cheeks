@@ -30,27 +30,43 @@ const Community = () => {
   }
   return (
     <container>
-      <Card>
-        <Card.Header>Community</Card.Header>
-        <Card.Body>
-          <Card.Title>Stephlovesskincare12</Card.Title>
-          <Card.Text>
-            Has anyone tried Glossiers new rose water spray?
-          </Card.Text>
-          <Button variant="info">Comment</Button>
-          <Button variant="info">View comments</Button>
-        </Card.Body>
-      </Card>
+    <Card>
+    <Card.Header>Community</Card.Header>
+    <Card.Body>
+    <Card.Title>Beautylover12</Card.Title>
+    <Card.Text>
+      Has anyone tried Glossiers new rose water spray?
+    </Card.Text>
+    <Button variant="info">Comment</Button>
+    <Button variant="info">View comments</Button>
+    </Card.Body>
+    </Card>
+    
+    
+    <Card>
+    <Card.Header>Community</Card.Header>
+    <Card.Body>
+    <Card.Title>Stephlovesskincare12</Card.Title>
+    <Card.Text>
+      Opinions on the new Summer Friday face mask?
+    </Card.Text>
+    <Button variant="info">Comment</Button>
+    <Button variant="info">View comments</Button>
+    </Card.Body>
+    </Card>
 
-      <Card>
-        <Card.Header>Community</Card.Header>
-        <Card.Body>
-          <Card.Title>Stephlovesskincare12</Card.Title>
-          <Card.Text>Opinions on the new Summer Friday face mask?</Card.Text>
-          <Button variant="info">Comment</Button>
-          <Button variant="info">View comments</Button>
-        </Card.Body>
-      </Card>
+    <Card>
+    <Card.Header>Community</Card.Header>
+    <Card.Body>
+    <Card.Title>Haley1234</Card.Title>
+    <Card.Text>
+      Who's tried the Cerave moisturizer?
+    </Card.Text>
+    <Button variant="info">Comment</Button>
+    <Button variant="info">View comments</Button>
+    </Card.Body>
+    </Card>
+
 
       <Card>
         <Card.Header>Community</Card.Header>
